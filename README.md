@@ -1,3 +1,5 @@
+<!-- banner --><a href="https://github.com/kenmwara"><img src="https://raw.githubusercontent.com/kenmwara/kenmwara/main/assets/brand/card-meridian.png?v=b804f706" width="100%" alt="Meridian: A compromised Linux web server: path traversal, a reused service-account password and a root backdoor. 16/16 flags · full marks."></a>
+
 # Threat Hunt Report: Hunt 25 "Meridian"
 
 A [Cyber Range](https://www.skool.com/cyber-range) live community threat hunt (Hunt 25, "Meridian"): a compromised Linux
