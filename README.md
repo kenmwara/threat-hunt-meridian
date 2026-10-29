@@ -2,8 +2,8 @@
 
 # Threat Hunt Report: Hunt 25 "Meridian"
 
-A [Cyber Range](https://www.skool.com/cyber-range) live community threat hunt (Hunt 25, "Meridian"): a compromised Linux
-web server, investigated from raw web, auth, audit and defence-stack logs in Azure Log Analytics with KQL. All 16 flags,
+A [Cyber Range](https://www.skool.com/cyber-range) live community threat hunt (Hunt 25, "Meridian"): a hacked Linux web server
+that runs a patient portal, traced through its web, login and security logs using KQL (Microsoft's log search language). All 16 flags,
 finished on time. Published after the hunt closed on 3 October 2026. A PDF copy of this report is in the repo:
 [Meridian-Threat-Hunt-Report.pdf](Meridian-Threat-Hunt-Report.pdf).
 
