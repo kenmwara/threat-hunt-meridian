@@ -12,6 +12,10 @@ finished on time. Published after the hunt closed on 3 October 2026. A PDF copy 
 **Host:** ip-10-1-15-67 (10.1.15.67, Ubuntu 22.04: Apache, PHP, MySQL) · **Attacker:** 10.1.134.57  
 **Window:** 2026-02-06 02:42:56 – 05:30:00 UTC (all times below are UTC, ordered by `EventTime_t`)  
 
+## Key takeaways
+
+<img src="images/scorecard.png" width="100%" alt="Key takeaways. Path traversal to root, and a backdoor still running at the end. 57 s: Config read to SSH login. database.conf read through path traversal; svc_backup's password worked over SSH. 73: Beacon attempts. A root SUID backdoor tried 10.1.134.57:43212; egress blocked the traffic, not the process. 1: Backdoor never removed. The defence stack flagged health_check but left it running; the incident is not contained. 0: Process telemetry. The stack's first sweep had removed sysmon.service before the intrusion began. 16 / 16: Flags, full marks. 1,675 of 1,675 points, finished on time.">
+
 ## 1. Summary
 
 An external attacker (10.1.134.57) mapped Meridian's patient portal with four tools, got into the app's dashboard, and
