@@ -14,7 +14,7 @@ finished on time. Published after the hunt closed on 3 October 2026. A PDF copy 
 
 ## Key takeaways
 
-<img src="images/scorecard.png" width="100%" alt="Key takeaways. Path traversal to root, and a backdoor still running at the end. 57 s: Config read to SSH login. database.conf read through path traversal; svc_backup's password worked over SSH. 73: Beacon attempts. A root SUID backdoor tried 10.1.134.57:43212; egress blocked the traffic, not the process. 1: Backdoor never removed. The defence stack flagged health_check but left it running; the incident is not contained. 0: Process telemetry. The stack's first sweep had removed sysmon.service before the intrusion began. 16 / 16: Flags, full marks. 1,675 of 1,675 points, finished on time.">
+<img src="images/scorecard.png" width="100%" alt="Key takeaways. A website flaw led to full control, and a backdoor was still running at the end. 57 s: From leaked password to login. A website flaw exposed a settings file with a password. 57 seconds later the attacker logged in with it. 73: Attempts to phone home. A hidden backdoor tried 73 times to contact the attacker. The firewall blocked the traffic, not the program. 1: Backdoor never removed. The server's defences flagged it but left it running. The attack wasn't over. 0: Record of running programs. A clean-up routine had switched off the tool that records them, before the attack began. 16 / 16: Every question answered. Full marks, on time.">
 
 ## 1. Summary
 
