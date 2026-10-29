@@ -18,6 +18,10 @@ finished on time. Published after the hunt closed on 3 October 2026. A PDF copy 
 
 ## 1. Summary
 
+**Bottom line.** An attacker broke into a patient portal's Linux web server: a website flaw leaked a password, they used it to
+log in, took full control, and exported patient data. A hidden backdoor was still running when the logs end, so the
+incident is not contained.
+
 An external attacker (10.1.134.57) mapped Meridian's patient portal with four tools, got into the app's dashboard, and
 used a path-traversal flaw in `config_viewer.php` to read `/etc/passwd` and `database.conf`. Fifty-seven seconds after
 reading the config file, they logged in over SSH as the existing service account **svc_backup** with its password. The
@@ -57,7 +61,7 @@ rotated (section 6).
 | 05:27:48, 05:28:24 | `/tmp/avml /tmp/evidence/memory.lime` (memory capture, twice) | Audit_CL |
 | 05:30:00 | Snapshot: `health_check` PID 267155 still running, real uid 1001, effective uid 0 | Snapshot_CL |
 
-## 3. Findings by kill-chain stage
+## 3. Findings, step by step through the attack
 
 **Reconnaissance (T1595).** Grouping the attacker's web requests by user agent gives four tools in order of first
 appearance: **nmap, curl, whatweb, gobuster**. The rows with no user agent arrive in the same second as Nmap and belong
@@ -142,7 +146,7 @@ Method notes:
 - Every query filters and orders by `EventTime_t`. `TimeGenerated` is ingestion time (2026-08-30).
 - Tables were reached from Defender Advanced Hunting as `workspace("LAW-HuntPractice").<Table>`.
 
-## 5. Detection gaps and evidence limits
+## 5. Gaps in alerts and evidence
 
 - **No process telemetry.** With Sysmon removed at 03:08, nothing records how `rootbash` and `health_check` were created,
   how the SUID bit was set, or what commands ran in the SSH sessions.
@@ -173,7 +177,7 @@ Method notes:
 6. Alert on the pattern this hunt followed: a sensitive file read over the web, then an SSH login within minutes from
    the same IP.
 
-## 7. MITRE ATT&CK
+## 7. Attacker techniques seen (MITRE ATT&CK)
 
 T1595 Active Scanning · T1190 Exploit Public-Facing Application · T1552.001 Credentials in Files · T1078 Valid Accounts ·
 T1548.001 Setuid and Setgid · T1036.005 Match Legitimate Name or Location · T1564.001 Hidden Files and Directories ·
