@@ -1,4 +1,4 @@
-<!-- banner --><a href="https://github.com/kenmwara"><img src="https://raw.githubusercontent.com/kenmwara/kenmwara/main/assets/brand/card-meridian.png?v=194522db" width="100%" alt="Meridian: A compromised Linux web server: path traversal, a reused service-account password and a root backdoor. 16/16 flags · full marks."></a>
+<!-- banner --><a href="https://github.com/kenmwara"><img src="https://raw.githubusercontent.com/kenmwara/kenmwara/main/assets/brand/card-meridian.png?v=58abc65f" width="100%" alt="Meridian: A compromised Linux web server: path traversal, a reused service-account password and a root backdoor. 16/16 flags · full marks."></a>
 
 # Threat Hunt Report: Hunt 25 "Meridian"
 
